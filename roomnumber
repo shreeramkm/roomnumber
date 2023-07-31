@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+	int d,key=9,f=0,c=0;
+	scanf("%d",&d);
+	while(f<20){
+		if(d%key==0){
+			f=1;
+			break;
+		}
+		else{
+			if(c==0){
+				key=key*10;
+				if(key>90){
+					key=key-90;
+				}
+				c=1;
+				printf("%d  ",key);
+			}
+			else if(c==1){
+				key=key+9;
+				c=0;
+				printf("%d ",key);
+			}
+		}
+		f++;
+}
+}
